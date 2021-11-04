@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import './app.css'
-import VideoList from './components/video_list';
+import VideoList from './components/video_list/video_list';
+import React from 'react'
 
 function App() {
   const [videos, setVideos] = useState([]);
-
+console.log(videos)
   useEffect(()=>{
+
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
