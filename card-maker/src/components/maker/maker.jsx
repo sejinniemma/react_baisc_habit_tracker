@@ -42,7 +42,7 @@ const Maker = ({ FileInput,authService,cardRepository }) => {
             setCards(cards);
         })
         return () => stopSync()
-    },[userId]);
+    },[userId],cardRepository);
 
     useEffect(() => {
         authService.onAuthChange(user => {
@@ -52,7 +52,7 @@ const Maker = ({ FileInput,authService,cardRepository }) => {
                 navigate('/');
             }
         })
-    })
+    },[authService, userId, navigate])
 
     return (
         <section className={styles.maker}>
