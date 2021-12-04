@@ -6,15 +6,16 @@ import styles from './maker.module.css';
 import Editor from '../editor/editor';
 import Preview from '../preview/preview';
 
-const Maker = ({ FileInput,authService,cardRepository }) => {
+const Maker = ({ FileInput, authService, cardRepository }) => {
     const navigate = useNavigate();  
     const navigateState = useNavigate().state;
     const [cards, setCards] = useState({})
     const [userId, setUserId] = useState(navigateState && navigateState.id);
 
-    const onLogout = () => {
-        authService.logout();
-    }
+    const onLogout = useCallback(
+        () => {
+            authService.logout();
+        },[authService]);
 
     const createOrUpDateCard = (card) => {
         setCards(cards => {
