@@ -1,0 +1,113 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 5rem;
+  background-color: teal;
+  border-radius: 4px;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.totalCount {
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: thistle;
+}
+
+.icon {
+  font-size: 2rem;
+  color: tomato;
+  margin: 0 0.2em;
+}
+
+.form {
+  display: flex;
+  margin: 2em 0;
+  width: 500px;
+}
+
+.input {
+  width: 100%;
+  height: 3rem;
+  font-size: 2rem;
+  outline: none;
+}
+
+.addBtn {
+  font-size: 1.5rem;
+  margin-left: 0.5em;
+  background-color: brown;
+  color: white;
+  border-radius: 4px;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  overflow-y: auto;
+}
+.habit {
+  font-size: 2.5rem;
+  width: 500px;
+  padding: 0.3em;
+  background-color: wheat;
+  list-style: none;
+}
+
+.habit-count {
+  display: inline-block;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  margin-left: 0.2em;
+  margin-right: 0.5em;
+  border-radius: 50%;
+  background-color: darkseagreen;
+}
+
+.habit-button {
+  font-size: 2.5rem;
+  color: white;
+  margin: 0 0.1em;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.habit-increase,
+.habit-decrease {
+  background-color: goldenrod;
+}
+.habit-delete {
+  font-size: 2rem;
+  color: darkred;
+}
+
+.habits-reset {
+  margin-top: 0.5em;
+  padding: 0.5rem;
+  font-size: 2em;
+  background-color: brown;
+  border-radius: 4px;
+  color: white;
+}
