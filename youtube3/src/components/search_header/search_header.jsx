@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import styles from "./search_header.module.css";
 
-const SearchHeader = ({ onSearch, firstPage }) => {
+const SearchHeader = memo(({ onSearch, firstPage }) => {
   const inputRef = useRef();
 
   const handleSearch = () => {
@@ -24,7 +24,7 @@ const SearchHeader = ({ onSearch, firstPage }) => {
   const backToList = () => {
     firstPage();
   };
-
+  console.log("header");
   return (
     <header className={styles.header}>
       <img
@@ -48,6 +48,5 @@ const SearchHeader = ({ onSearch, firstPage }) => {
       </button>
     </header>
   );
-};
-
+});
 export default SearchHeader;
