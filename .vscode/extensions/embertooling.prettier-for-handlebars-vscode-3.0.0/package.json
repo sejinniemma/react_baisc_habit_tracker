@@ -1,0 +1,50 @@
+{
+	"name": "prettier-for-handlebars-vscode",
+	"displayName": "Prettier for Handlebars",
+	"description": "Prettier formatting for Handlebars files - Clone of handlebars-formatter",
+	"version": "3.0.0",
+	"publisher": "embertooling",
+	"repository": "https://github.com/ember-tooling/prettier-for-handlebars-vscode.git",
+	"engines": {
+		"vscode": "^1.48.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension",
+	"contributes": {},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"copyFixtures": "cp -R ./test-fixtures ./out/test/suite/",
+		"pretest": "npm run compile && npm run copyFixtures",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/fs-extra": "^9.0.1",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.3",
+		"@types/node": "^14.6.4",
+		"@types/prettier": "^2.1.0",
+		"@types/vscode": "^1.48.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"tslint": "^6.1.3",
+		"typescript": "4.0.2",
+		"vscode-test": "^1.4.0"
+	},
+	"dependencies": {
+		"prettier": "1.18.2"
+	},
+	"__metadata": {
+		"id": "31fdaacc-0e37-4580-a514-a5b25e31a0da",
+		"publisherId": "afccc8cd-2015-4fc4-90b5-194fc926ef32",
+		"publisherDisplayName": "Ember Tooling",
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1639194300347
+	}
+}
