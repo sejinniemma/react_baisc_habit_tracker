@@ -1,0 +1,159 @@
+:root {
+  --color-cream: #f6eee0;
+  --color-peach: #e4b7a0;
+  --color-brown: #a45c40;
+  --color-coral: #c38370;
+  --color-pink: #f4b9b8;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: "Shadows Into Light", cursive;
+  background-color: var(--color-cream);
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  width: 200px;
+  height: 25px;
+  font-size: medium;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    120deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(145, 55, 26, 0.8393951330532212) 62%
+  );
+  width: 600px;
+  height: 100vh;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 50px;
+  color: white;
+  cursor: default;
+}
+
+.resetBtn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: darkgoldenrod;
+  border: 1px solid white;
+  color: white;
+  border-radius: 4px;
+  transition: transform 1ms ease-in;
+}
+
+.resetBtn:hover,
+.addBtn:hover {
+  transform: scale(1.1);
+}
+
+.main {
+  position: relative;
+  background-color: var(--color-peach);
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.selection {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.date,
+#cafe-select {
+  cursor: pointer;
+}
+
+.items {
+  margin: 8px;
+  padding-left: 0%;
+}
+
+.item_row {
+  position: relative;
+  margin-bottom: 4px;
+  margin-top: 20px;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.item_row .underline {
+  position: absolute;
+  bottom: -8px;
+  content: "";
+  display: block;
+  justify-content: center;
+  height: 2px;
+  width: 100%;
+  background-color: var(--color-brown);
+}
+
+.total {
+  position: absolute;
+  right: -30px;
+  bottom: 4px;
+  text-align: center;
+  background-color: var(--color-pink);
+  padding: 4px;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 4px;
+}
+
+.footer {
+  position: relative;
+  background-color: var(--color-cream);
+  padding: 4px;
+}
+
+.coffeeName {
+  margin-right: 8px;
+}
+
+.addBtn {
+  height: 40px;
+  width: 40px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background-color: #c38370;
+}
+
+.icon {
+  font-size: large;
+}
