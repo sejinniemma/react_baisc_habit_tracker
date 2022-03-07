@@ -6,6 +6,7 @@ const gameScore = document.querySelector(".game__score");
 const gameField = document.querySelector(".game__field");
 const popUp = document.querySelector(".pop-up");
 const popUpMessage = document.querySelector(".pop-up__message");
+const popUpRefresh = document.querySelector(".pop-up__refresh");
 const fieldWidth = gameField.getBoundingClientRect().width;
 const fieldHeight = gameField.getBoundingClientRect().height;
 const elsaHalfWidth = 55;
@@ -25,10 +26,12 @@ gameBtn.addEventListener("click", () => {
 });
 
 function startGame() {
+  gameField.innerHTML = "";
   started = true;
   addItem();
   startGameTimer();
   showStopButton();
+  hidePopUpMessage();
 }
 
 function stopGame() {
@@ -42,6 +45,10 @@ function stopGame() {
 function showWithPopUPMessage(text) {
   popUp.style.visibility = "visible";
   popUpMessage.textContent = text;
+}
+
+function hidePopUpMessage() {
+  popUp.style.visibility = "hidden";
 }
 
 //Game Timer
@@ -79,6 +86,7 @@ function showGameButton() {
 function showStopButton() {
   gameBtn.innerHTML =
     '<img width="70" height="70" src="images/stop.png" alt="button" />';
+  gameBtn.style.visibility = "visible";
 }
 
 //addItem
@@ -135,3 +143,6 @@ function finishGame(win) {
   stopGameTimer();
   hideGameButton();
 }
+
+// Relpay button
+popUpRefresh.addEventListener("click", startGame);
