@@ -6,15 +6,18 @@ const gameScore = document.querySelector(".game__score");
 const gameField = document.querySelector(".game__field");
 const popUp = document.querySelector(".pop-up");
 const popUpMessage = document.querySelector(".pop-up__message");
-
 const fieldWidth = gameField.getBoundingClientRect().width;
 const fieldHeight = gameField.getBoundingClientRect().height;
 const elsaHalfWidth = 55;
 const elsaHalfHeight = 80;
+let olafCount = 10;
+let elsaCount = 10;
+let score = null;
 let started = false;
-const gameDuration = 60;
+const gameDuration = 10;
 let timer = null;
 
+//Game start!!
 gameBtn.addEventListener("click", () => {
   if (started === false) {
     startGame();
@@ -30,13 +33,12 @@ function startGame() {
 
 function stopGame() {
   started = false;
-  showWithPopUPMessage("You loose");
+  showWithPopUPMessage("Replay?");
   stopGameTimer();
   hideGameButton();
 }
 
 //pop up
-
 function showWithPopUPMessage(text) {
   popUp.style.visibility = "visible";
   popUpMessage.textContent = text;
@@ -49,6 +51,7 @@ function startGameTimer() {
   timer = setInterval(() => {
     if (gameTimer === 0) {
       clearInterval(timer);
+      finishGame(score === olafCount ? true : false);
     }
     makeTimer(--gameTimer);
   }, 1000);
@@ -80,8 +83,8 @@ function showStopButton() {
 
 //addItem
 function addItem() {
-  creatItem("images/Olaf.png", 10, "olaf");
-  creatItem("images/elsa.png", 10, "elsa");
+  creatItem("images/Olaf.png", olafCount, "olaf");
+  creatItem("images/elsa.png", elsaCount, "elsa");
 }
 
 function creatItem(url, count, className) {
@@ -103,4 +106,32 @@ function creatItem(url, count, className) {
 
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
+}
+
+// remove olaf
+
+gameField.addEventListener("click", (event) => removeItem(event.target));
+
+function removeItem(item) {
+  makeScore(olafCount);
+  if (item.className === "olaf") {
+    item.remove();
+    score++;
+    makeScore(score);
+    if (score === olafCount) {
+      finishGame(true);
+    }
+  } else if (item.className === "elsa") {
+    finishGame(false);
+  }
+}
+function makeScore(score) {
+  gameScore.textContent = olafCount - score;
+}
+
+function finishGame(win) {
+  started = false;
+  showWithPopUPMessage(win ? "You win" : "You loose");
+  stopGameTimer();
+  hideGameButton();
 }
