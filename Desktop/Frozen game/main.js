@@ -12,10 +12,13 @@ const fieldHeight = gameField.getBoundingClientRect().height;
 const elsaHalfWidth = 55;
 const elsaHalfHeight = 80;
 let started = false;
-const timer = 60;
+const gameDuration = 60;
+let timer = null;
 
 gameBtn.addEventListener("click", () => {
-  startGame();
+  if (started === false) {
+    startGame();
+  } else stopGame();
 });
 
 function startGame() {
@@ -35,20 +38,24 @@ function stopGame() {
 //pop up
 
 function showWithPopUPMessage(text) {
-  popUp.style.visibilty = visible;
+  popUp.style.visibility = "visible";
   popUpMessage.textContent = text;
 }
 
 //Game Timer
 function startGameTimer() {
-  let gameTimer = timer;
+  let gameTimer = gameDuration;
   makeTimer(gameTimer);
-  const clearInterval = setInterval(() => {
+  timer = setInterval(() => {
     if (gameTimer === 0) {
-      clearInterval.remove();
+      clearInterval(timer);
     }
     makeTimer(--gameTimer);
   }, 1000);
+}
+
+function stopGameTimer() {
+  clearInterval(timer);
 }
 
 function makeTimer(sec) {
