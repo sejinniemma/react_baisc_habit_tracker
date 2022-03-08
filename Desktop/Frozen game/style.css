@@ -28,7 +28,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: url(images/bg1.jpeg);
+  background: url(images/bg2.jpeg);
   background-position: center;
   background-size: cover;
   width: 900px;
@@ -90,14 +90,14 @@ button:hover {
   margin-top: 8px;
 }
 
-.game__field .elsa {
-  width: 60px;
-  height: 90px;
+.game__field .fire {
+  width: 80px;
+  height: 110px;
 }
 
 .game__field .olaf {
-  width: 80px;
-  height: 100px;
+  width: 100px;
+  height: 120px;
 }
 .game__field img {
   cursor: pointer;

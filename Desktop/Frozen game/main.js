@@ -4,18 +4,22 @@ const gameBtn = document.querySelector(".game__button");
 const gameTimer = document.querySelector(".game__timer");
 const gameScore = document.querySelector(".game__score");
 const gameField = document.querySelector(".game__field");
+const fieldWidth = gameField.getBoundingClientRect().width;
+const fieldHeight = gameField.getBoundingClientRect().height;
+
 const popUp = document.querySelector(".pop-up");
 const popUpMessage = document.querySelector(".pop-up__message");
 const popUpRefresh = document.querySelector(".pop-up__refresh");
-const fieldWidth = gameField.getBoundingClientRect().width;
-const fieldHeight = gameField.getBoundingClientRect().height;
+
+const olafSound = new Audio();
 const elsaHalfWidth = 55;
 const elsaHalfHeight = 80;
+const GAME_DURATION_SEC = 15;
+
 let started = false;
 let OLAF_COUNT = 10;
 let ELSA_COUNT = 10;
 let score = null;
-const GAME_DURATION_SEC = 15;
 let timer = null;
 
 //Game start!!
@@ -44,7 +48,7 @@ function stopGame() {
 //Create items and make them to be located randomly in the field
 function initGame() {
   addItem("olaf", OLAF_COUNT, "images/Olaf.png");
-  addItem("elsa", ELSA_COUNT, "images/elsa.png");
+  addItem("fire", ELSA_COUNT, "images/fire.png");
 }
 
 function addItem(className, count, imgPath) {
@@ -75,7 +79,7 @@ function startGameTimer() {
   timer = setInterval(() => {
     if (remainingTimeSec === 0) {
       clearInterval(timer);
-      finishGame(score === OLAF_COUNT ? true : false);
+      finishGame(score === OLAF_COUNT);
     }
     makeTimer(--remainingTimeSec);
   }, 1000);
@@ -133,7 +137,7 @@ function onFiledClick(event) {
     if (score === OLAF_COUNT) {
       finishGame(true);
     }
-  } else if (target.matches(".elsa")) {
+  } else if (target.matches(".fire")) {
     finishGame(false);
   }
 }
@@ -143,7 +147,7 @@ function updateScoreBoard(score) {
 
 function finishGame(win) {
   started = false;
-  showWithPopUPMessage(win ? "You win" : "You loose");
+  showWithPopUPMessage(win ? "YOU WON🎊" : "YOU LOST😈");
   stopGameTimer();
   hideGameButton();
 }
