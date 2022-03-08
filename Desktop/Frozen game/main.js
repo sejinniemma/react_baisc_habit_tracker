@@ -11,11 +11,11 @@ const fieldWidth = gameField.getBoundingClientRect().width;
 const fieldHeight = gameField.getBoundingClientRect().height;
 const elsaHalfWidth = 55;
 const elsaHalfHeight = 80;
-let olafCount = 10;
-let elsaCount = 10;
-let score = null;
 let started = false;
-const gameDuration = 10;
+let OLAF_COUNT = 10;
+let ELSA_COUNT = 10;
+let score = null;
+const GAME_DURATION_SEC = 15;
 let timer = null;
 
 //Game start!!
@@ -28,7 +28,7 @@ gameBtn.addEventListener("click", () => {
 function startGame() {
   gameField.innerHTML = "";
   started = true;
-  addItem();
+  initGame();
   startGameTimer();
   showStopButton();
   hidePopUpMessage();
@@ -36,31 +36,48 @@ function startGame() {
 
 function stopGame() {
   started = false;
-  showWithPopUPMessage("Replay?");
   stopGameTimer();
   hideGameButton();
+  showWithPopUPMessage("Replay?");
 }
 
-//pop up
-function showWithPopUPMessage(text) {
-  popUp.style.visibility = "visible";
-  popUpMessage.textContent = text;
+//Create items and make them to be located randomly in the field
+function initGame() {
+  addItem("olaf", OLAF_COUNT, "images/Olaf.png");
+  addItem("elsa", ELSA_COUNT, "images/elsa.png");
 }
 
-function hidePopUpMessage() {
-  popUp.style.visibility = "hidden";
+function addItem(className, count, imgPath) {
+  const x = 0;
+  const y = 0;
+  const x2 = fieldWidth - elsaHalfWidth;
+  const y2 = fieldHeight - elsaHalfHeight;
+
+  for (let i = 0; i < count; i++) {
+    const item = document.createElement("img");
+    item.setAttribute("src", imgPath);
+    item.setAttribute("class", className);
+    item.style.position = "absolute";
+    item.style.left = `${randomNumber(x, x2)}px`;
+    item.style.top = `${randomNumber(y, y2)}px`;
+    gameField.appendChild(item);
+  }
+}
+
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 //Game Timer
 function startGameTimer() {
-  let gameTimer = gameDuration;
-  makeTimer(gameTimer);
+  let remainingTimeSec = GAME_DURATION_SEC;
+  makeTimer(remainingTimeSec);
   timer = setInterval(() => {
-    if (gameTimer === 0) {
+    if (remainingTimeSec === 0) {
       clearInterval(timer);
-      finishGame(score === olafCount ? true : false);
+      finishGame(score === OLAF_COUNT ? true : false);
     }
-    makeTimer(--gameTimer);
+    makeTimer(--remainingTimeSec);
   }, 1000);
 }
 
@@ -72,6 +89,16 @@ function makeTimer(sec) {
   const minute = Math.floor(sec / 60);
   const second = Math.floor(sec % 60);
   return (gameTimer.textContent = `${minute} : ${second}`);
+}
+
+//pop up
+function showWithPopUPMessage(text) {
+  popUp.style.visibility = "visible";
+  popUpMessage.textContent = text;
+}
+
+function hidePopUpMessage() {
+  popUp.style.visibility = "hidden";
 }
 
 // Game button
@@ -89,52 +116,29 @@ function showStopButton() {
   gameBtn.style.visibility = "visible";
 }
 
-//addItem
-function addItem() {
-  creatItem("images/Olaf.png", olafCount, "olaf");
-  creatItem("images/elsa.png", elsaCount, "elsa");
-}
-
-function creatItem(url, count, className) {
-  const x = 0;
-  const y = 0;
-  const x2 = fieldWidth - elsaHalfWidth;
-  const y2 = fieldHeight - elsaHalfHeight;
-
-  for (let i = 0; i < count; i++) {
-    const item = document.createElement("img");
-    item.setAttribute("src", url);
-    item.setAttribute("class", className);
-    item.style.position = "absolute";
-    item.style.left = `${randomNumber(x, x2)}px`;
-    item.style.top = `${randomNumber(y, y2)}px`;
-    gameField.appendChild(item);
-  }
-}
-
-function randomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min) + min);
-}
-
 // remove olaf
 
-gameField.addEventListener("click", (event) => removeItem(event.target));
+gameField.addEventListener("click", onFiledClick);
 
-function removeItem(item) {
-  makeScore(olafCount);
-  if (item.className === "olaf") {
-    item.remove();
+function onFiledClick(event) {
+  const target = event.target;
+  if (!started) {
+    return;
+  }
+  updateScoreBoard(OLAF_COUNT);
+  if (target.matches(".olaf")) {
+    target.remove();
     score++;
-    makeScore(score);
-    if (score === olafCount) {
+    updateScoreBoard(score);
+    if (score === OLAF_COUNT) {
       finishGame(true);
     }
-  } else if (item.className === "elsa") {
+  } else if (target.matches(".elsa")) {
     finishGame(false);
   }
 }
-function makeScore(score) {
-  gameScore.textContent = olafCount - score;
+function updateScoreBoard(score) {
+  gameScore.textContent = OLAF_COUNT - score;
 }
 
 function finishGame(win) {
