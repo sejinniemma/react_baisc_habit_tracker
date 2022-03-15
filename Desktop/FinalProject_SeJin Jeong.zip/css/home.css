@@ -177,3 +177,14 @@ figure {
   color: black;
   font-size: 30px;
 }
+
+/* footer */
+
+footer p {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  color: black;
+  text-align: center;
+  height: 30px;
+}
