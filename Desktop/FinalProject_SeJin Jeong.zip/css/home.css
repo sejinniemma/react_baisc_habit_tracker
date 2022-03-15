@@ -17,13 +17,16 @@ header {
 ul {
   list-style: none;
   display: flex;
+}
+
+header ul {
   justify-content: space-evenly;
   align-items: center;
   padding-top: 5%;
   height: 10vh;
 }
 
-li {
+header li {
   width: 100px;
   height: 100%;
   line-height: 10vh;
@@ -32,12 +35,12 @@ li {
   text-align: center;
 }
 
-li:hover {
+header li:hover {
   background-color: mistyrose;
   cursor: pointer;
 }
 
-li:hover a {
+header li:hover a {
   color: rosybrown;
 }
 
@@ -45,7 +48,7 @@ a {
   text-decoration: none;
 }
 
-li > a {
+header li > a {
   color: black;
 }
 
@@ -55,6 +58,7 @@ img {
 
 main {
   width: 100%;
+  display: flex;
 }
 
 .video-header {
@@ -80,12 +84,18 @@ main {
   padding-left: 20%;
   padding-top: 5%;
 }
+.first-article,
+.second-article,
+.third-article {
+  background-color: mistyrose;
+  margin-bottom: 6%;
+}
 
 .first-article h2 {
   background-color: antiquewhite;
-  height: 50px;
-  line-height: 50px;
-  padding-left: 2%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 4%;
 }
 
 article aside {
@@ -96,9 +106,9 @@ article aside {
 
 .second-article h2 {
   background-color: sandybrown;
-  height: 50px;
-  line-height: 50px;
-  padding-left: 2%;
+  height: 60px;
+  line-height: 60px;
+  padding-left: 4%;
 }
 
 .first-section p {
@@ -113,4 +123,57 @@ figure {
   font-size: 14px;
   display: flex;
   justify-content: space-between;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+/* second section */
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding-right: 20%;
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+.second-section .third-article h2 {
+  height: 60px;
+  line-height: 60px;
+  padding-left: 4%;
+  background-color: sienna;
+}
+.ad-image {
+  padding-left: 25px;
+}
+
+.ad-image img {
+  width: 100px;
+  padding: 7%;
+}
+
+.ad-image {
+  display: flex;
+}
+
+.second-article p {
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-bottom: 4%;
+}
+
+.third-article ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8%;
+  padding-top: 8%;
+}
+
+.third-article li {
+  padding-bottom: 7%;
+}
+.third-article a {
+  color: black;
+  font-size: 30px;
 }
