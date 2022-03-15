@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* selector tags */
+/* id  */
+/* class */
+
+/* tag selector */
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+header {
+  background-color: rgba(40, 40, 40);
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15%;
+  padding-right: 10%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  height: 20vh;
+}
+
+header > div {
+  line-height: 1.5;
+}
+
+header h1 {
+  font-size: 60px;
+}
+
+nav {
+  margin-top: 2%;
+  width: 50%;
+}
+
+nav > article {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav > p {
+  line-height: 1.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  color: aliceblue;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color: lightblue;
+  font-size: 24px;
+}
+
+article p {
+  display: flex;
+  flex-direction: column;
+}
+
+article p a {
+  margin-bottom: 1%;
+}
+h1 {
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+}
+
+.welcome {
+  height: 40vh;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  color: rgb(100, 100, 100);
+}
+
+.welcome a {
+  color: rgb(100, 100, 100);
+}
+
+.welcome a:hover {
+  text-decoration: underline;
+}
+
+#welcome-column-1 {
+  width: 40%;
+  border: 1px solid black;
+}
+
+.welcome ul {
+  list-style-type: square;
+  padding-left: 7%;
+}
+[class*="welcome-column"] {
+  width: 26%;
+}
+
+.nav-menu {
+  margin-bottom: 3%;
+}
+
+.huge_word {
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  border: 1px solid black;
+  color: lightblue;
+  font-size: 100px;
+}
+
+.section-gallery {
+  padding-right: 15%;
+  padding-left: 15%;
+}
+.gallery-first-row {
+  display: flex;
+}
+
+.gallery-first-row h3 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+/* outline is outside of border */
+
+.gallery-first-row p {
+  width: 70%;
+}
+
+.gallery-first-row aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: lightgray;
+  width: 248px;
+  height: 144px;
+  outline: 1px solid rgb(100, 100, 100);
+  border: 3px solid white;
+  border-radius: 4px;
+  background-color: rgb(14, 14, 14);
+}
+
+.gallery-first-row article {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-gallery a {
+  color: rgb(76, 187, 176);
+  margin-top: 5%;
+}
+
+.botton-section {
+  background-color: rgb(40, 40, 40);
+  padding-left: 15%;
+  padding-right: 15%;
+  display: flex;
+  justify-content: space-between;
+  color: whitesmoke;
+  height: 45vh;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.botton-section article {
+  width: 400%;
+  border: 1px solid white;
+}
+
+.bottom-first-col aside {
+  width: 15vh;
+  height: 15vh;
+  border: 1px solid whitesmoke;
+  float: left;
+  outline: 1px solid whitesmoke;
+  border: 4px solid black;
+  background-color: rgb(100, 100, 100);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-right: 5%;
+}
+
+.bottom-second-column aside {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(100, 100, 100);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-second-column div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+footer {
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: rgb(100, 100, 100);
+  color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+}
+.botton-section hr {
+  border: 1px solid whitesmoke;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+}
