@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/home.html">Home Page</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/table.html">Table Content</a></li>
+          <li><a href="/contact.html">Contact Form</a></li>
+        </ul>
+      </nav>
+      <div class="background">
+        <p class="title">Contact Form Page</p>
+        <p>This is the contact page</p>
+      </div>
+    </header>
+    <main>
+      <h2>Customer Form - Starbucks</h2>
+      <!-- first section -->
+      <section class="customer-section">
+        <form method="post">
+          <div class="name">
+            <label for="name">Name</label>
+            <input type="text" placeholder="name" />
+          </div>
+          <div class="password">
+            <label for="password">Password</label>
+            <input type="password" placeholder="password" />
+          </div>
+
+          <input class="submit" type="submit" value="Submit" />
+          <input class="reset" type="reset" value="Reset" />
+        </form>
+      </section>
+
+      <!-- second section -->
+      <section class="coffee-section">
+        <!-- Radio -->
+        <form action="submit">
+          <div class="select-coffee">
+            <p class="select-title">Select Your favorit Coffee:</p>
+
+            <div>
+              <input
+                type="radio"
+                id="americano"
+                name="coffee"
+                value="americano"
+                checked
+              />
+              <label for="americano">Americano</label>
+            </div>
+
+            <div>
+              <input type="radio" id="latte" name="coffee" value="latte" />
+              <label for="latte">Latte</label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                id="cappucino"
+                name="coffee"
+                value="cappucino"
+              />
+              <label for="cappucino">Cappucino</label>
+            </div>
+          </div>
+
+          <!-- Select : option -->
+          <div class="select-option">
+            <label for="flavor">Choose a flavor:</label>
+
+            <select name="flavor" id="flavor">
+              <option value="">--Please choose an option--</option>
+              <option value="shot">Shot</option>
+              <option value="syrup">syrup</option>
+              <option value="cream">Cream</option>
+              <option value="milk">milk</option>
+              <option value="sinamon">Sinamon</option>
+              <option value="ice">Ice</option>
+            </select>
+          </div>
+
+          <!-- Number -->
+          <div class="select-number">
+            <label for="cupOfCoffee">How many coffee will you get ? </label>
+
+            <input
+              type="number"
+              id="cupOfCoffee"
+              name="cupOfCoffee"
+              min="1"
+              max="10"
+            />
+          </div>
+          <!-- Date -->
+          <div class="select-date">
+            <label for="when">Choose date:</label>
+
+            <input
+              type="date"
+              id="when"
+              name="when"
+              value="2022-03-18"
+              min="2022-03-18"
+              max="2023-12-31"
+            />
+          </div>
+          <!-- Time -->
+          <div class="select-time">
+            <label for="getCoffee">What time will you get a coffee :</label>
+            <input
+              type="time"
+              id="getCoffee"
+              name="getCoffee"
+              min="09:00"
+              max="18:00"
+              required
+            />
+          </div>
+          <!-- Text area -->
+          <div class="textarea">
+            <label for="story">Please leave the comments:</label>
+
+            <textarea id="comment" name="comment" rows="8" cols="50">
+    Please leave your comment..
+    </textarea
+            >
+          </div>
+          <input class="submit" type="submit" value="Submit" />
+          <input class="reset" type="reset" value="Reset" />
+        </form>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
