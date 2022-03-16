@@ -53,7 +53,12 @@ header li > a {
 }
 
 .background {
-  background-color: antiquewhite;
+  background: rgb(216, 215, 231);
+  background: linear-gradient(
+    120deg,
+    rgba(216, 215, 231, 1) 0%,
+    rgba(205, 190, 133, 1) 62%
+  );
   width: 1000px;
   height: 40vh;
   display: flex;
@@ -73,6 +78,7 @@ main {
   align-items: center;
   flex-direction: column;
   margin-top: 4%;
+  margin-bottom: 4%;
 }
 
 table {

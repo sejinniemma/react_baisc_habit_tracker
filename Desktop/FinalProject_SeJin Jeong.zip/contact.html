@@ -18,26 +18,26 @@
         </ul>
       </nav>
       <div class="background">
-        <p class="title">Contact Form Page</p>
-        <p>This is the contact page</p>
+        <p class="title">What kind of Coffee ?</p>
+        <p>This is your choice</p>
       </div>
     </header>
     <main>
-      <h2>Customer Form - Starbucks</h2>
+      <h2>Customer Form - Flower Cafe</h2>
       <!-- first section -->
       <section class="customer-section">
         <form method="post">
           <div class="name">
             <label for="name">Name</label>
-            <input type="text" placeholder="name" />
+            <input type="text" placeholder="name" required />
           </div>
           <div class="password">
             <label for="password">Password</label>
-            <input type="password" placeholder="password" />
+            <input type="password" placeholder="password" required />
           </div>
 
-          <input class="submit" type="submit" value="Submit" />
-          <input class="reset" type="reset" value="Reset" />
+          <input class="submit" type="submit" value="submit" />
+          <input class="reset" type="reset" value="reset" />
         </form>
       </section>
 
@@ -81,12 +81,16 @@
 
             <select name="flavor" id="flavor">
               <option value="">--Please choose an option--</option>
-              <option value="shot">Shot</option>
-              <option value="syrup">syrup</option>
-              <option value="cream">Cream</option>
-              <option value="milk">milk</option>
-              <option value="sinamon">Sinamon</option>
-              <option value="ice">Ice</option>
+              <optgroup label="syrup">
+                <option value="shot">Vanilla</option>
+                <option value="syrup">Hazelnut</option>
+                <option value="cream">Dark sugar</option>
+              </optgroup>
+              <optgroup label="milk">
+                <option value="milk">Skiny milk</option>
+                <option value="sinamon">Whole milk</option>
+                <option value="ice">Amond milk</option>
+              </optgroup>
             </select>
           </div>
 
@@ -135,9 +139,10 @@
     Please leave your comment..
     </textarea
             >
+          <div class="second-input"> 
+          <input class="submit" type="submit" value="submit" />
+          <input class="reset" type="reset" value="reset" />
           </div>
-          <input class="submit" type="submit" value="Submit" />
-          <input class="reset" type="reset" value="Reset" />
         </form>
       </section>
     </main>

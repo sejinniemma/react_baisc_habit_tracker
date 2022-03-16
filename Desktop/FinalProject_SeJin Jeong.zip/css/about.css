@@ -59,9 +59,11 @@ header img {
 
 main {
   display: flex;
+  flex-direction: column;
   padding-left: 15%;
   padding-right: 15%;
   padding-top: 5%;
+  margin-bottom: 4%;
 }
 
 main article img {
@@ -86,6 +88,44 @@ main article hr {
   margin-bottom: 8%;
 }
 
+.history,
+.schedule,
+.contact {
+  width: 100%;
+  display: flex;
+  flex-direction: initial;
+  background-color: mistyrose;
+  padding: 4%;
+}
+
+.history h3,
+.schedule h3,
+.contact h3 {
+  margin-right: 4%;
+}
+
+.history img,
+.schedule img,
+.contact img {
+  margin-right: 4%;
+}
+.about,
+.passion {
+  display: flex;
+  flex-direction: initial;
+  padding: 4%;
+  width: 100%;
+}
+
+.about h3,
+.passion h3 {
+  margin-left: 4%;
+}
+
+.about img,
+.passion img {
+  margin-left: 4%;
+}
 footer p {
   padding-left: 15%;
   padding-right: 15%;

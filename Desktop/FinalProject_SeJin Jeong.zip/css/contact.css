@@ -145,6 +145,10 @@ main h2 {
   margin-bottom: 4%;
 }
 
+.second-input input {
+  padding: 1.5%;
+}
+
 footer p {
   padding-left: 15%;
   padding-right: 15%;
