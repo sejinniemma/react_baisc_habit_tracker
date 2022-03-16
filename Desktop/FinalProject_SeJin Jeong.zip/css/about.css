@@ -89,8 +89,9 @@ main article hr {
 footer p {
   padding-left: 15%;
   padding-right: 15%;
-  padding-top: 5%;
   color: black;
   text-align: center;
   height: 30px;
+  line-height: 30px;
+  background-color: sandybrown;
 }

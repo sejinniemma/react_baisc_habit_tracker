@@ -67,15 +67,6 @@ header li > a {
   font-size: 50px;
 }
 
-footer p {
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-top: 5%;
-  color: black;
-  text-align: center;
-  height: 30px;
-}
-
 main {
   display: flex;
   justify-content: center;
@@ -103,4 +94,14 @@ thead tr th {
   border-bottom: 2px solid black;
   padding-top: 1%;
   padding-bottom: 1%;
+}
+
+footer p {
+  padding-left: 15%;
+  padding-right: 15%;
+  color: black;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  background-color: sandybrown;
 }

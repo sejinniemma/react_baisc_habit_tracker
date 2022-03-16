@@ -59,6 +59,7 @@ img {
 main {
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
 
 .video-header {
@@ -80,15 +81,15 @@ main {
 .first-section {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 60%;
   padding-left: 20%;
   padding-top: 5%;
 }
 .first-article,
-.second-article,
-.third-article {
+.second-article {
   background-color: mistyrose;
   margin-bottom: 6%;
+  border-radius: 4px;
 }
 
 .first-article h2 {
@@ -96,12 +97,14 @@ main {
   height: 60px;
   line-height: 60px;
   padding-left: 4%;
+  border-radius: 4px;
 }
 
 article aside {
   float: left;
   margin-right: 4%;
   margin-top: 4%;
+  margin-left: 4%;
 }
 
 .second-article h2 {
@@ -109,12 +112,17 @@ article aside {
   height: 60px;
   line-height: 60px;
   padding-left: 4%;
+  border-radius: 4px;
 }
 
 .first-section p {
   padding-top: 2%;
   padding-left: 5%;
   padding-right: 4%;
+}
+
+.first-section .second-article p {
+  padding-bottom: 0;
 }
 
 figure {
@@ -131,30 +139,36 @@ figure {
 
 .second-section {
   display: flex;
-  flex-direction: column;
-  width: 25%;
+  width: 80%;
   padding-right: 20%;
   padding-left: 10%;
   padding-top: 5%;
-}
-
-.second-section .third-article h2 {
-  height: 60px;
-  line-height: 60px;
-  padding-left: 4%;
-  background-color: sienna;
-}
-.ad-image {
-  padding-left: 25px;
-}
-
-.ad-image img {
-  width: 100px;
-  padding: 7%;
-}
-
-.ad-image {
   display: flex;
+  justify-content: space-evenly;
+}
+
+.first-article ul {
+  flex-direction: column;
+  padding: 10%;
+  list-style-type: square;
+}
+
+.second-section .first-article li {
+  font-size: 25px;
+}
+
+.second-section .first-article {
+  width: 30%;
+  padding: 4%;
+}
+
+.second-section .second-article {
+  width: 30%;
+  padding: 4%;
+}
+
+.first-article ul li {
+  margin-bottom: 2%;
 }
 
 .second-article p {
@@ -163,28 +177,14 @@ figure {
   padding-bottom: 4%;
 }
 
-.third-article ul {
-  display: flex;
-  flex-direction: column;
-  padding-left: 8%;
-  padding-top: 8%;
-}
-
-.third-article li {
-  padding-bottom: 7%;
-}
-.third-article a {
-  color: black;
-  font-size: 30px;
-}
-
 /* footer */
 
 footer p {
   padding-left: 15%;
   padding-right: 15%;
-  padding-top: 5%;
   color: black;
   text-align: center;
   height: 30px;
+  line-height: 30px;
+  background-color: sandybrown;
 }
