@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* TAG SELECTOR */
+main {
+  background-color: grey;
+  border-left: 65px solid darkorange;
+  border-right: 65px solid darkorange;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+blockquote {
+  font-style: italic;
+  padding-left: 15%;
+  line-height: 1.5;
+  margin-bottom: 5%;
+  padding-right: 15%;
+}
+
+blockquote a {
+  color: orangered;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer {
+  background-color: lightgray;
+  padding: 1%;
+  color: rgb(88, 85, 85);
+}
+
+footer a {
+  color: orangered;
+  text-decoration: none;
+}
+
+form {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: gray;
+}
+
+fieldset {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset input[type="search"] {
+  padding: 2%;
+  margin-bottom: 3%;
+}
+
+/*  CLASS SELECTOR */
+.main-content {
+  background-color: white;
+}
+
+.left-side {
+  width: 30%;
+  background-color: whitesmoke;
+  padding: 2%;
+}
+.left-side h2 {
+  color: rgb(80, 78, 78);
+  padding-bottom: 5%;
+}
+
+.left-side ul {
+  padding-left: 25%;
+  list-style-type: square;
+  color: orangered;
+}
+
+.left-side li {
+  padding: 2%;
+}
+
+.left-side a {
+  color: rgb(31, 29, 29);
+  text-decoration: none;
+}
+
+.left-side a:hover {
+  text-decoration: underline;
+}
+.left-side p {
+  line-height: 1.5;
+  color: gray;
+}
+
+.left-side article,
+fieldset {
+  margin-bottom: 13%;
+}
+/* right side */
+
+.right-side {
+  padding: 3%;
+  float: right;
+  width: 70%;
+}
+.section-cotainer {
+  display: flex;
+}
+
+.right-side h2 {
+  color: orangered;
+  letter-spacing: 4px;
+}
+
+.right-side span,
+blockquote {
+  color: goldenrod;
+}
+
+.right-side p {
+  line-height: 1.5;
+  color: gray;
+}
+
+.right-side article {
+  padding-top: 5%;
+}
+
+.right-side aside {
+  width: 10vh;
+  height: 10vh;
+  border: 1px solid orange;
+  margin-right: 3%;
+  float: left;
+  background: url(img/cherry-blossom.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bottom-article {
+  border: 1px solid grey;
+  padding: 1%;
+  margin-top: 5%;
+}
+
+.bottom-article a {
+  text-decoration: none;
+  color: orangered;
+  padding-left: 5%;
+}
+
+.bottom-article time {
+  padding-left: 5%;
+}
+
+.right-side h2 {
+  padding-bottom: 5%;
+}
+
+nav {
+  background-color: orange;
+  z-index: 0;
+  position: absolute;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 50.7%;
+  top: 175px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin-left: 5%;
+  width: 80%;
+  height: 6vh;
+  line-height: 6vh;
+}
+
+nav li {
+  padding-right: 5%;
+  height: 10vh;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: black;
+  padding: 5%;
+}
+
+ul a:hover {
+  color: whitesmoke;
+}
+
+header {
+  background: url(img/pexels-simon-berger-1323550.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+header h1 {
+  background-color: burlywood;
+  display: inline-block;
+  padding: 1%;
+  border-radius: 8px;
+  position: absolute;
+  right: 357px;
+}
