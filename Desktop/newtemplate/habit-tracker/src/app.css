@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -6,6 +10,29 @@ button {
   outline: none;
   border: 0;
   cursor: pointer;
+}
+
+.navbar {
+  font-size: 2rem;
+  padding: 1em;
+  background-color: lightsalmon;
+}
+
+.navbar-logo {
+  color: darkkhaki;
+  margin-right: 0.5em;
+}
+
+.add-input {
+  margin-right: 0.2em;
+}
+
+.add-button {
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 0.3em 0.5em;
+  background-color: rgb(134, 99, 46);
+  color: white;
 }
 
 .habit {
@@ -46,4 +73,16 @@ button {
 .habit-delete {
   font-size: 2rem;
   color: goldenrod;
+}
+
+.habit-delete {
+  font-size: 2rem;
+  color: darkred;
+}
+
+.habits-reset {
+  font-size: 1.5rem;
+  padding: 0.2em 1em;
+  background-color: mistyrose;
+  color: white;
 }

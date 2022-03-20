@@ -14,10 +14,10 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav>
-        <i className="fa-solid fa-ice-cream"></i>
+      <nav className="navbar">
+        <i className="navbar-logo" class="fa-solid fa-ice-cream"></i>
         <span>Habit tracker</span>
-        <span>{this.props.totalCount}</span>
+        <span className="navbar-count">{this.props.totalCount}</span>
       </nav>
     );
   }
