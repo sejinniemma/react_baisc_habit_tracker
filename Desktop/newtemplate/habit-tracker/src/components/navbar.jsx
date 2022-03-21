@@ -1,17 +1,6 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
-export default class Navbar extends Component {
-  totalCount = () => {
-    const totalCountArray = [];
-    this.props.habits.filter((habit) => {
-      if (habit.count > 0) {
-        totalCountArray.push(habit);
-      }
-    });
-
-    return totalCountArray.length;
-  };
-
+export default class Navbar extends PureComponent {
   render() {
     return (
       <nav className="navbar">
